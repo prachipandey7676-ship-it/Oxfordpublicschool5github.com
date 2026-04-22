@@ -115,6 +115,19 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* STATS */
 .stats {
   display: flex;
   justify-content: center;
@@ -122,36 +135,21 @@ h2 {
   flex-wrap: wrap;
 }
 
+.icon {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.stat {
+  text-align: center;
+}
+
 .stat h3 {
-  font-size: 40px;
+  font-size: 42px;
   color: #0A1F44;
 }
 
-.slider {
-  position: relative;
-  max-width: 600px;
-  margin: auto;
-}
-
-.slider img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #0A1F44;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
+/* CONTACT */
 .contact {
   display: flex;
   flex-wrap: wrap;
@@ -206,23 +204,6 @@ button:hover {
   border-radius: 30px;
   text-decoration: none;
 }
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
-    gap: 15px;
-    max-width: 900px;
-    margin: auto;
-  }
-
-  .gallery img {
-    width: 100%;
-    border-radius: 10px;
-    transition: 0.3s;
-  }
-
-  .gallery img: hover {
-    transform: scale(1.05);
-  }
 
 footer {
   background: #0A1F44;
@@ -254,10 +235,11 @@ footer {
   </ul>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
   <div class="hero-text">
     <h2>Welcome to Oxford Public School</h2>
-    <button class="btn">Explore</button>
+    <a href="#about" class="btn">Explore</a>
   </div>
 </div>
 
@@ -265,10 +247,7 @@ footer {
 <section id="about">
   <h2>About Us</h2>
   <p style="max-width:800px;margin:auto;line-height:1.7;">
-    Oxford Public School is committed to providing quality education with a focus on academic excellence,
-    discipline, and overall personality development. Our mission is to nurture young minds and prepare
-    them for a bright future through a balanced approach of academics, co-curricular activities, and
-    strong moral values.
+    Oxford Public School is committed to providing quality education with academic excellence and discipline.
   </p>
 </section>
 
@@ -277,20 +256,35 @@ footer {
   <h2>Important Forms</h2>
   <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
     <a href="Admission Form.pdf" target="_blank" class="btn">Admission Form</a>
-    <a href="Academic Registration Form"
-target="_blank" class="btn">Academic Registration</a>
-    <a href="Transportation Form.pdf"
-target="_blank" class="btn">Transport Form</a>
+    <a href="Academic Registration Form.pdf" target="_blank" class="btn">Academic Registration</a>
+    <a href="Transportation Form.pdf" target="_blank" class="btn">Transport Form</a>
   </div>
 </section>
 
 <!-- STATS -->
 <section>
   <h2>Our Achievements</h2>
+
   <div class="stats">
-    <div class="stat"><h3 class="count" data-target="1200">0</h3><p>Students</p></div>
-    <div class="stat"><h3 class="count" data-target="50">0</h3><p>Teachers</p></div>
-    <div class="stat"><h3 class="count" data-target="98">0</h3><p>% Results</p></div>
+
+    <div class="stat">
+      <div class="icon">🎓</div>
+      <h3 class="count" data-target="500" data-plus="true">0</h3>
+      <p>Students</p>
+    </div>
+
+    <div class="stat">
+      <div class="icon">👨‍🏫</div>
+      <h3 class="count" data-target="20">0</h3>
+      <p>Teachers</p>
+    </div>
+
+    <div class="stat">
+      <div class="icon">📊</div>
+      <h3 class="count" data-target="98" data-percent="true">0</h3>
+      <p>Results</p>
+    </div>
+
   </div>
 </section>
 
@@ -298,32 +292,32 @@ target="_blank" class="btn">Transport Form</a>
 <section>
   <h2>Gallery</h2>
   <div class="gallery">
-    <Img src: "image1.jpeg">;
-    <Img src: "image2.jpeg">;
-   <Img src: "image3.jpeg">;
-   <Img src: "image4.jpeg">;
-   <Img src: "image5.jpeg">;
-   <Img src: "image6.jpeg">;
-   <Img src: "image7.jpeg">;
-   <Img src: "image8.jpeg">;
-   <Img src: "image9.jpeg">;
-   <Img src: "image10.jpeg">;
-   <Img src: "image11.jpeg">;
-   <Img src: "image12.jpeg">;
-   <Img src: "image13.jpeg">;
-   <Img src: "image14.jpeg">;
-   <Img src: "image15.jpeg">;
-   <Img src: "image16.jpeg">;
-   <Img src: "image17.jpeg">;
-   <Img src: "image18.jpeg">;
-   <Img src: "image19.jpeg">;
-   <Img src: "image20.jpeg">;
-   <Img src: "image21.jpeg">;
-    <Img src: "image22.jpeg">;
-   <Img src: "image23.jpeg">;
-   <Img src: "image24.jpeg">;
-   <Img src: "image25.jpeg">;
-   <Img src: "image26.jpeg">;
+    <img src="image1.jpeg">
+    <img src="image2.jpeg">
+    <img src="image3.jpeg">
+    <img src="image4.jpeg">
+    <img src="image5.jpeg">
+    <img src="image6.jpeg">
+    <img src="image7.jpeg">
+    <img src="image8.jpeg">
+    <img src="image9.jpeg">
+    <img src="image10.jpeg">
+    <img src="image11.jpeg">
+    <img src="image12.jpeg">
+    <img src="image13.jpeg">
+    <img src="image14.jpeg">
+    <img src="image15.jpeg">
+    <img src="image16.jpeg">
+    <img src="image17.jpeg">
+    <img src="image18.jpeg">
+    <img src="image19.jpeg">
+    <img src="image20.jpeg">
+    <img src="image21.jpeg">
+    <img src="image22.jpeg">
+    <img src="image23.jpeg">
+    <img src="image24.jpeg">
+    <img src="image25.jpeg">
+    <img src="image26.jpeg">
   </div>
 </section>
 
@@ -332,20 +326,19 @@ target="_blank" class="btn">Transport Form</a>
   <h2>Contact Us</h2>
   <div class="contact">
     <div class="contact-info">
-      <p>📍 Oxford Public School, Dumwalia, Bagaha - 02, Bihar</p>
-      <p>📞 <a href="tel:+919934133833">9934133833</a> | <a href="tel:+919430488440">9430488440</a></p>
-      <p>📧 <a href="mailto:oxfordbgh@gmail.com">oxfordbgh@gmail.com</a></p>
+      <p>📍 Oxford Public School, Bagaha, Bihar</p>
+      <p>📞 9934133833 | 9430488440</p>
+      <p>📧 oxfordbgh@gmail.com</p>
     </div>
     <iframe src="https://www.google.com/maps?q=Oxford+Public+School+Bagaha&output=embed"></iframe>
   </div>
 </section>
 
-<!-- WORKING FORM -->
+<!-- ADMISSION -->
 <section id="admission">
   <h2>Admission Form</h2>
 
   <form action="https://formsubmit.co/oxfordbgh@gmail.com" method="POST">
-    
     <input type="hidden" name="_captcha" value="false">
 
     <input type="text" name="student_name" placeholder="Student Name" required>
@@ -355,8 +348,19 @@ target="_blank" class="btn">Transport Form</a>
 
     <select name="class" required>
       <option>Select Class</option>
+      <option>Nursery</option>
+      <option>LKG</option>
+      <option>UKG</option>
       <option>1st</option>
       <option>2nd</option>
+      <option>3rd</option>
+      <option>4th</option>
+      <option>5th</option>
+      <option>6th</option>
+      <option>7th</option>
+      <option>8th</option>
+      <option>9th</option>
+      <option>10th</option>
     </select>
 
     <textarea name="address" placeholder="Address"></textarea>
@@ -372,32 +376,31 @@ target="_blank" class="btn">Transport Form</a>
 </footer>
 
 <script>
-let images = ["image15.jpeg","image16.jpeg","image22.jpeg","image8.jpeg"];
-let i = 0;
-
-document.querySelector(".next").onclick = function() {
-  i = (i + 1) % images.length;
-  document.getElementById("slide").src = images[i];
-};
-
-document.querySelector(".prev").onclick = function() {
-  i = (i - 1 + images.length) % images.length;
-  document.getElementById("slide").src = images[i];
-};
-
 const counters = document.querySelectorAll('.count');
+
 counters.forEach(counter => {
+  const target = +counter.getAttribute('data-target');
+  const isPlus = counter.getAttribute('data-plus');
+  const isPercent = counter.getAttribute('data-percent');
+
+  let count = 0;
+  const speed = 200;
+
   const update = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const inc = target / 100;
+    const increment = target / speed;
+
     if (count < target) {
-      counter.innerText = Math.ceil(count + inc);
-      setTimeout(update, 20);
+      count += increment;
+      counter.innerText = Math.floor(count);
+      requestAnimationFrame(update);
     } else {
       counter.innerText = target;
+
+      if (isPlus) counter.innerText = target + "+";
+      if (isPercent) counter.innerText = target + "%";
     }
   };
+
   update();
 });
 </script>
