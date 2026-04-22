@@ -1,66 +1,406 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Oxford Public School</title>
-  <style>
-    body {
-      font-family: Arial;
-      margin:0;
-      background-colour: #f5f5f5;
-    }
-    HEADER {
-      background-color:#000;
-      color: gold;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      back-color:#222;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 10px;
-      text-decoration: none;
-    }
-    section {
-      padding: 40px;
-      text-align: center;
-    }
-    footer{
-      background-color: black;
-      color: white;
-      padding: 10px;
-      text-align: center;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Oxford Public School</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: #333;
+}
+
+.topbar {
+  background: #0A1F44;
+  color: white;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+nav {
+  background: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.logo span {
+  font-weight: 600;
+  color: #0A1F44;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover {
+  color: #0A1F44;
+}
+
+.hero {
+  background: url('image23.jpeg') center/cover no-repeat;
+  height: 400px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(10,31,68,0.7);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.btn {
+  background: white;
+  color: #0A1F44;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+section {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #0A1F44;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.stat h3 {
+  font-size: 40px;
+  color: #0A1F44;
+}
+
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+.slider img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0A1F44;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-info {
+  text-align: left;
+}
+
+iframe {
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #0A1F44;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+}
+
+button:hover {
+  background: #ffd700;
+  color: black;
+}
+
+.apply-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0A1F44;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  .gallery img: hover {
+    transform: scale(1.05);
+  }
+
+footer {
+  background: #0A1F44;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Oxford Public School</h1>
-  <p>Empowering Young Minds</p>
-</header>
+<div class="topbar">
+  <span>📞 9934133833 | 9430488440</span>
+  <span>📧 oxfordbgh@gmail.com</span>
+</div>
 
-  <nav>
-    <a href="#">HOME</a>a>
-    <a href="#">ABOUT</a>
-    <a href="#">ADMISSIONS</A>a>
-    <a href="#">CONTACT</a>
-  </nav>
+<nav>
+  <div class="logo">
+    <img src="opslogo.jpeg">
+    <span>Oxford Public School</span>
+  </div>
 
-  <section>
-    <h2>Welcome to our school</h2>
-    <p>This is the official website of Oxford Public School.
-    </p>
-  </section>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#forms">Forms</a></li>
+    <li><a href="#admission">Admission</a></li>
+  </ul>
+</nav>
 
-  <footer>
-    <p> 2026 Oxford Public School</p>
-  </footer>
+<div class="hero">
+  <div class="hero-text">
+    <h2>Welcome to Oxford Public School</h2>
+    <button class="btn">Explore</button>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+  <p style="max-width:800px;margin:auto;line-height:1.7;">
+    Oxford Public School is committed to providing quality education with a focus on academic excellence,
+    discipline, and overall personality development. Our mission is to nurture young minds and prepare
+    them for a bright future through a balanced approach of academics, co-curricular activities, and
+    strong moral values.
+  </p>
+</section>
+
+<!-- FORMS -->
+<section id="forms">
+  <h2>Important Forms</h2>
+  <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+    <a href="Admission Form.pdf" target="_blank" class="btn">Admission Form</a>
+    <a href="Academic Registration Form"
+target="_blank" class="btn">Academic Registration</a>
+    <a href="Transportation Form.pdf"
+target="_blank" class="btn">Transport Form</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<section>
+  <h2>Our Achievements</h2>
+  <div class="stats">
+    <div class="stat"><h3 class="count" data-target="1200">0</h3><p>Students</p></div>
+    <div class="stat"><h3 class="count" data-target="50">0</h3><p>Teachers</p></div>
+    <div class="stat"><h3 class="count" data-target="98">0</h3><p>% Results</p></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <Img src: "image1.jpeg">;
+    <Img src: "image2.jpeg">;
+   <Img src: "image3.jpeg">;
+   <Img src: "image4.jpeg">;
+   <Img src: "image5.jpeg">;
+   <Img src: "image6.jpeg">;
+   <Img src: "image7.jpeg">;
+   <Img src: "image8.jpeg">;
+   <Img src: "image9.jpeg">;
+   <Img src: "image10.jpeg">;
+   <Img src: "image11.jpeg">;
+   <Img src: "image12.jpeg">;
+   <Img src: "image13.jpeg">;
+   <Img src: "image14.jpeg">;
+   <Img src: "image15.jpeg">;
+   <Img src: "image16.jpeg">;
+   <Img src: "image17.jpeg">;
+   <Img src: "image18.jpeg">;
+   <Img src: "image19.jpeg">;
+   <Img src: "image20.jpeg">;
+   <Img src: "image21.jpeg">;
+    <Img src: "image22.jpeg">;
+   <Img src: "image23.jpeg">;
+   <Img src: "image24.jpeg">;
+   <Img src: "image25.jpeg">;
+   <Img src: "image26.jpeg">;
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+  <h2>Contact Us</h2>
+  <div class="contact">
+    <div class="contact-info">
+      <p>📍 Oxford Public School, Dumwalia, Bagaha - 02, Bihar</p>
+      <p>📞 <a href="tel:+919934133833">9934133833</a> | <a href="tel:+919430488440">9430488440</a></p>
+      <p>📧 <a href="mailto:oxfordbgh@gmail.com">oxfordbgh@gmail.com</a></p>
+    </div>
+    <iframe src="https://www.google.com/maps?q=Oxford+Public+School+Bagaha&output=embed"></iframe>
+  </div>
+</section>
+
+<!-- WORKING FORM -->
+<section id="admission">
+  <h2>Admission Form</h2>
+
+  <form action="https://formsubmit.co/oxfordbgh@gmail.com" method="POST">
+    
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="text" name="student_name" placeholder="Student Name" required>
+    <input type="text" name="parent_name" placeholder="Parent Name" required>
+    <input type="tel" name="phone" placeholder="Phone" required>
+    <input type="email" name="email" placeholder="Email" required>
+
+    <select name="class" required>
+      <option>Select Class</option>
+      <option>1st</option>
+      <option>2nd</option>
+    </select>
+
+    <textarea name="address" placeholder="Address"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<a href="#admission" class="apply-btn">Apply Now</a>
+
+<footer>
+  © 2026 Oxford Public School
+</footer>
+
+<script>
+let images = ["image15.jpeg","image16.jpeg","image22.jpeg","image8.jpeg"];
+let i = 0;
+
+document.querySelector(".next").onclick = function() {
+  i = (i + 1) % images.length;
+  document.getElementById("slide").src = images[i];
+};
+
+document.querySelector(".prev").onclick = function() {
+  i = (i - 1 + images.length) % images.length;
+  document.getElementById("slide").src = images[i];
+};
+
+const counters = document.querySelectorAll('.count');
+counters.forEach(counter => {
+  const update = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const inc = target / 100;
+    if (count < target) {
+      counter.innerText = Math.ceil(count + inc);
+      setTimeout(update, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  update();
+});
+</script>
 
 </body>
 </html>
- 
